@@ -42,6 +42,14 @@ a:hover {
   text-decoration: none;
 }
 
+.first-name::before {
+  color: white;
+  content: "Claudio A. ";
+}
+.last-name::before {
+  content: "Martins"
+}
+
 body {
   font-family: Raleway, Arial, Helvetica, sans-serif;
   background: #333;
@@ -171,6 +179,13 @@ section#about, section#education, section#portfolio {
 }
 
 @media only screen and (max-width: 768px) {
+  .first-name::before {
+    color: white;
+    content: "C.A.";
+  }
+  .last-name::before {
+    content: "M."
+  }
   body {
     line-height: 1;
   }
@@ -182,7 +197,7 @@ section#about, section#education, section#portfolio {
     width: 100%;
   }
   section#home h1 {
-    font-size: 3rem;
+    font-size: 5rem;
   }
   section h1 {
     font-size: 2.2rem;
