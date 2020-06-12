@@ -36,7 +36,7 @@ loadRepositories();
 function addProfiles() {
   var slide = document.getElementById('github');
   var html = '<h1>Portfolio</h1>';
-      html +='<div class="row">';
+      html +='<div class="row" style="width: 99%">';
 
   github.forEach(function(repo, index, repos) {
     repo.description = (repo.description == null)? '...' : repo.description;
