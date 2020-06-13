@@ -41,7 +41,7 @@ function addProfiles() {
   github.forEach(function(repo, index, repos) {
     repo.description = (repo.description == null)? '...' : repo.description;
     repo.language = (repo.language == null)? '' : repo.language;
-    html += '<div class="col mb-2 col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-2">'
+    html += '<div class="col mb-2 col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">'
     html += '<div class="card border-dark" style="height:92%">';
     html += '<a href="' + repo.href + '" target="_blank">';
     html += '<div class="card-header font-weight-bold text-left text-uppercase small">' + repo.name + '</div>';
