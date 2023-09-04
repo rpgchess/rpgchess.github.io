@@ -36,17 +36,17 @@ loadRepositories();
 function addProfiles() {
   var slide = document.getElementById('github');
   var html = '<h1>Portfolio</h1>';
-      html +='<div class="row" style="width: 99%">';
+      html +='<div class="row" style="width: 99%;">';
 
   github.forEach(function(repo, index, repos) {
-    repo.description = (repo.description == null)? '...' : repo.description;
-    repo.language = (repo.language == null)? '' : repo.language;
+    repo.description = (repo.description == null)? '...' : ((repo.description == '')? '...' : repo.description );
+    repo.language = (repo.language == null)? '.' : ((repo.language == '')? '.' : repo.language );
     html += '<div class="col mb-2 col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">'
-    html += '<div class="card border-dark" style="height:92%">';
+    html += '<div class="card">';
     html += '<a href="' + repo.href + '" target="_blank">';
-    html += '<div class="card-header font-weight-bold text-left text-uppercase small">' + repo.name + '</div>';
-    html += '<div class="card-text mt-2 text-center"><p>' + repo.description + '</p></div>';
-    html += '<div class="card-footer text-uppercase text-muted small d-flex justify-content-end">' + repo.language + '</div>';
+    html += '<h5 class="card-title font-weight-bold text-center text-uppercase small">' + repo.name + '</h5>';
+    html += '<p class="card-text mt-2 text-center">' + repo.description + '</p>';
+    html += '<span class="card-link text-uppercase small d-flex justify-content-end">' + repo.language + '</span>';
     html += '</a>';
     html += '</div>';
     html += '</div>';

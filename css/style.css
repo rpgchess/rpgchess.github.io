@@ -6,14 +6,44 @@
   -moz-osx-font-smoothing: grayscale
 }
 
+body, p, div, section, span, a, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
 .auto-scroll {
-  overflow-y: auto;
-  overflow-x: none;
-  width: 80%;
+  overflow: auto;
+}
+
+.col2 {
+  width: 99%;
+  column-count: 2;
+  column-rule: 1px solid;
+}
+
+.col3 {
+  width: 99%;
+  column-count: 3;
+  column-rule: 1px solid;
+}
+
+.col6 {
+  width: 99%;
+  column-count: 6;
+  column-rule-width: 10px;
 }
 
 .card {
-  height: 150px;
+  background: #454545;
+  border-radius: 10px;
+}
+
+.card-link {
+  color:#58A8D5;
 }
 
 section#portfolio a:visited {
@@ -153,11 +183,7 @@ section p {
   font-size: 1rem;
   color: #bcbcbc;
 }
-/*
-section#about, section#education, section#portfolio {
-  background: silver;
-}
-*/
+
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -210,8 +236,5 @@ section#about, section#education, section#portfolio {
   }
   .slicker {
     width: 600px;
-  }
-  .card {
-    height: 200px
   }
 }

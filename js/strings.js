@@ -1,13 +1,23 @@
 function setLanguage(lang = "en-US") {
-    const fullName      = 'Claudio Almeida Martins';
-    const smallName     = 'Claudio A. Martins';
-    const firstName     = 'Claudio';
-    const middleName    = 'Almeida';
-    const lastName      = 'Martins';
-    const home          = (lang === "pt-BR")? 'Início' : 'Home';
-    const about         = (lang === "pt-BR")? 'Sobre' : 'About';
-    const portifolio    = (lang === "pt-BR")? 'Portifolio' : 'Portifolio';
-    const contact       = (lang === "pt-BR")? 'Contato' : 'Contact';
+    return {
+        bio: {
+            fullName:   'Claudio Almeida Martins',
+            smallName:  'Claudio A. Martins',
+            firstName:  'Claudio',
+            middleName: 'Almeida',
+            lastName:   'Martins'
+        },
+        screens: {
+            home:         (lang === "pt-BR")? 'Início' : 'Home',
+            about:        (lang === "pt-BR")? 'Sobre' : 'About',
+            professional: (lang === "pt-BR")? 'Profissional' : 'Professional',
+            education:    (lang === "pt-BR")? 'Educa&ccedil;&atilde;o' : 'education',
+            skills:       (lang === "pt-BR")? 'Qualifica&ccedil;&otilde;es' : 'Skills',
+            portifolio:   (lang === "pt-BR")? 'Portifolio' : 'Portifolio',
+            contact:      (lang === "pt-BR")? 'Contato' : 'Contact'
+        }
+    }
+
 }
 
 
